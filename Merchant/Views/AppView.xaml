@@ -1,0 +1,15 @@
+﻿<Window x:Class="Merchant.Views.AppView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Merchant.Views"
+        mc:Ignorable="d"
+        Title="AppView" Height="500" Width="550" WindowState="Maximized" WindowStartupLocation="CenterScreen" >
+    <Window.Resources>
+                <ResourceDictionary Source="../Resources/DataTemplates.xaml"></ResourceDictionary>
+    </Window.Resources>
+    <Grid>
+        <ContentControl Content="{Binding CurrentViewModel}" />
+    </Grid>
+</Window>

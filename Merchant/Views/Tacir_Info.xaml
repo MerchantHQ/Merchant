@@ -1,0 +1,317 @@
+﻿<UserControl x:Class="Merchant.Views.Tacir_Info"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Merchant.Views"
+        mc:Ignorable="d"
+         Background="#FFE4E4E0"
+        
+         Height="auto" Width="auto"  Foreground="#FF060606"  >
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="35"/>
+            <RowDefinition Height="62"/>
+            <RowDefinition/>
+            <RowDefinition Height="150"/>
+        </Grid.RowDefinitions>
+        <Menu Foreground="Blue" Background="LightCyan">
+            <MenuItem Header="Əməliyyatlar" FontSize="18">
+                <MenuItem Header="Malın alınması"/>
+                <MenuItem Header="Malın satılması"/>
+                <MenuItem  Header="Təmənnasız alış"/>
+                <Separator/>
+                <MenuItem Header="Xərclərin daxil edilməsi"/>
+                <MenuItem Header="Pul vəsaitinin kassadan çıxarılması"/>
+            </MenuItem>
+            <MenuItem Header="Jurnal" FontSize="18">
+                <MenuItem Header="Əməliyyatlar"/>
+            </MenuItem>
+            <MenuItem Header="Hesabatlar" FontSize="18">
+                <MenuItem Header="Malların hesabatları">
+                    <MenuItem Header="Malların ümumi hesabatı"/>
+                    <MenuItem Header="Malların tam hesabatı"/>
+                    <MenuItem Header="Malların satış üzrə hesabatı"/>
+                    <MenuItem Header="Seçilən malın tam hesabatı"/>
+                    <Separator/>
+                    <MenuItem Header="Malların seçilən əməliyyat üzrə hesabatı"/>
+                    <MenuItem Header="Malların obyektlərarası hesabatı"/>
+                    <Separator/>
+                    <MenuItem Header="Son istifadə tarixi üzrə hesabat"/>
+                </MenuItem>
+                <MenuItem Header="Şəxslərin hesabatları">
+                    <MenuItem Header="Şəxslərin məlumatı və ümumi hesabatı"/>
+                    <MenuItem Header="Şəxslərin alış üzrə ümumi hesabatı"/>
+                    <MenuItem Header="Şəxslərin satış üzrə ümumi hesabatı"/>
+                    <MenuItem Header="Seçilən şəxsə göstərilən xidmətlərin hesabatı"/>
+                    <Separator/>
+                    <MenuItem Header="Seçilən şəxsin əməliyyatlarının siyahısı"/>
+                    <MenuItem Header="Seçilən şəxsin əməliyyatlar üzrə mallarının siyahısı"/>
+                </MenuItem>
+                <MenuItem Header="Xərclərin hesabatları">
+                    <MenuItem Header="Xərclərin ümumi hesabatı"/>
+                    <MenuItem Header="Seçilən xərcin günlər üzrə hesabatı"/>
+                </MenuItem>
+                <MenuItem Header="Xidmətlərin hesabatı">
+                    <MenuItem Header="Xidmətlərin ümumi hesabatı"/>
+                    <MenuItem Header="Seçilən xidmətin günlər üzrə hesabatı"/>
+                </MenuItem>
+                <Separator/>
+                <MenuItem Header="Kassa hesabatı">
+                    <MenuItem Header="Kassanın ümumi hesabatı"/>
+                    <Separator/>
+                    <MenuItem Header="Kassanın günlər üzrə tam hesabatı"/>
+                    <MenuItem Header="Kassanın mədaxil və məxaric hesabatı"/>
+                    <MenuItem Header="Kassanın istifadəçilər üzrə üzrə hesabatı"/>
+                </MenuItem>
+            </MenuItem>
+            <MenuItem Header="Əlavələr" FontSize="18">
+                <MenuItem Header="Obyekti dəyişdir"/>
+                <MenuItem Header="Qiymət siyahısı"/>
+                <MenuItem Header="Kreditlərin siyahısı"/>
+                <MenuItem Header="Anbar siyahısı"/>
+                <Separator/>
+                <MenuItem Header="Xatırlatmalar"/>
+                <MenuItem Header="Gündəlik qeydlər"/>
+                <MenuItem Header="Sifarişlər"/>
+                <MenuItem Header="Bonuslar"/>
+                <Separator/>
+                <MenuItem Header="Kredit kalkulyatoru"/>
+                <MenuItem Header="Kalkulyator"/>
+                <Separator/>
+                <MenuItem Header="Standart mövzu"/>
+            </MenuItem>
+            <MenuItem Header="Sorğu kitabçası" FontSize="18">
+                <MenuItem Header="Kateqoriya və mal adları">
+                    <MenuItem.Icon>
+                        <Image Source="/Images/Category.png" Width="20" Height="20"/>
+                    </MenuItem.Icon>
+                    <MenuItem  Header="Kateqoriya adları">
+                        <MenuItem.Icon>
+                            <Image Source="/Images/Catalog.png" Width="20" Height="20"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem  Header="Mal adları">
+                        <MenuItem.Icon>
+                            <Image Source="/Images/ProductName.png" Width="20" Height="20"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                </MenuItem>
+                <MenuItem Header="Şəxslərin siyahısı"/>
+                <MenuItem Header="Xidmət adları"/>
+                <MenuItem  Header="Xərc adları">
+                    <MenuItem.Icon>
+                        <Image Source="/Images/Money.png" Width="20" Height="24"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Header="Əlavə gəlir mənbələri"/>
+                <Separator/>
+                <MenuItem Header="İşçilər və vəzifələr">
+                    <MenuItem.Icon>
+                        <Image Source="/Images/Employee.png" Width="20" Height="20"/>
+                    </MenuItem.Icon>
+                    <MenuItem  Header="İşçilərin siyahısı">
+                        <MenuItem.Icon>
+                            <Image Source="/Images/Employee.png" Width="20" Height="20"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem  Header="Vəzifələr">
+                        <MenuItem.Icon>
+                            <Image  Source="/Images/position.png" Width="20" Height="20"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                </MenuItem>
+            </MenuItem>
+            <MenuItem Header="İdarəetmə" FontSize="18">
+                <MenuItem Header="Əsas sazlamalar"/>
+                <MenuItem Header="Məlumat bazası">
+                    <MenuItem Header="Məlumat bazasını aktivləşdir"/>
+                    <MenuItem Header="Məlumat bazasını bərpa et"/>
+                    <Separator/>
+                    <MenuItem Header="Arxivləşmə tarixçəsi"/>
+                    <Separator/>
+                    <MenuItem Header="Məlumat bazasını sil"/>
+                </MenuItem>
+                <MenuItem Header="İstifadəçilər"/>
+                <MenuItem Header="Şifrənin dəyişdirilməsi"/>
+                <Separator/>
+                <MenuItem Header="Təklif/şikayət göndər"/>
+                <MenuItem Header="Aktivləşdirmə"/>
+                <MenuItem Header="Haqqında"/>
+            </MenuItem>
+        </Menu>
+        <StackPanel Grid.Row="1" Orientation="Horizontal">
+            <Button Width="90" BorderBrush="#FFE4E4E0" >
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Foreground" Value="Blue"/>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Foreground" Value="Red"/>
+                                <Setter Property="FontWeight" Value="ExtraBold"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Image Source="/Images/Malin_alinmasi.png" Width="50" Height="40"></Image>
+                    <TextBlock Grid.Row="1" Foreground="Blue">Malın alınması</TextBlock>
+                </Grid>
+            </Button>
+            <Button Width="90" BorderBrush="#FFE4E4E0">
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Foreground" Value="Blue"/>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Foreground" Value="Red"/>
+                                <Setter Property="FontWeight" Value="ExtraBold"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Image Source="/Images/Malin_satilmasi.png"  Width="50" Height="40"></Image>
+                    <TextBlock Grid.Row="1" Foreground="Blue">Malın satılması</TextBlock>
+                </Grid>
+            </Button>
+            <Button Width="88" BorderBrush="#FFE4E4E0">
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Foreground" Value="Blue"/>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Foreground" Value="Red"/>
+                                <Setter Property="FontWeight" Value="ExtraBold"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Image Source="/Images/Icons8-Windows-8-Food-List-Ingredients.ico"  Width="50" Height="40"></Image>
+                    <TextBlock Grid.Row="1" Foreground="Blue" FontSize="12" HorizontalAlignment="Center">Jurnal</TextBlock>
+                </Grid>
+            </Button>
+            <Button Width="88" BorderBrush="#FFE4E4E0">
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Foreground" Value="Blue"/>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Foreground" Value="Red"/>
+                                <Setter Property="FontWeight" Value="ExtraBold"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Image Source="/Images/Oxygen-Icons.org-Oxygen-Apps-accessories-calculator.ico"  Width="50" Height="40"></Image>
+                    <TextBlock Grid.Row="1" Foreground="Blue" HorizontalAlignment="Center">Kalkulyator</TextBlock>
+                </Grid>
+            </Button>
+            <Button Width="94" BorderBrush="#FFE4E4E0">
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Foreground" Value="Blue"/>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Foreground" Value="Red"/>
+                                <Setter Property="FontWeight" Value="ExtraBold"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Image Source="/Images/Price-icon.png"  Width="50" Height="40"></Image>
+                    <TextBlock Grid.Row="1" Foreground="Blue">Qiymət siyahısı</TextBlock>
+                </Grid>
+            </Button>
+            <Button Width="105" BorderBrush="#FFE4E4E0">
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Foreground" Value="Blue"/>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Foreground" Value="Red"/>
+                                <Setter Property="FontWeight" Value="ExtraBold"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+
+                </Button.Style>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Image Source="/Images/Users-icon.png"  Width="50" Height="40"></Image>
+                    <TextBlock Grid.Row="1" Foreground="Blue">Şəxslərin siyahısı</TextBlock>
+                </Grid>
+            </Button>
+            <Button Width="83" BorderBrush="#FFE4E4E0">
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Foreground" Value="Blue"/>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Foreground" Value="Red"/>
+                                <Setter Property="FontWeight" Value="ExtraBold"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+
+                <Grid>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Image Source="/Images/Product-documentation-icon.png"  Width="50" Height="40"></Image>
+                    <TextBlock Grid.Row="1" Foreground="Blue" HorizontalAlignment="Center">Mal adları</TextBlock>
+                </Grid>
+
+            </Button>
+            <Button Width="83" BorderBrush="#FFE4E4E0" >
+                
+
+                <Grid>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Image Source="/Images/Users-Exit-icon.png"  Width="50" Height="40"></Image>
+                    <TextBlock Grid.Row="1" Foreground="Blue" HorizontalAlignment="Center">Çıxış</TextBlock>
+                </Grid>
+
+            </Button>
+        </StackPanel>
+
+
+        <Image Stretch="Fill" Grid.Row="2" Source="/Images/logo.png" Height="130" Width="200"/>
+
+
+    </Grid>
+</UserControl>

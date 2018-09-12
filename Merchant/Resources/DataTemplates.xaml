@@ -1,0 +1,16 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:vm="clr-namespace:Merchant.ViewModels"
+                    xmlns:v="clr-namespace:Merchant.Views"
+                    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                    xmlns:local="clr-namespace:Merchant">
+    <DataTemplate DataType="{x:Type vm:AppViewModel}">
+        <v:AppView/>
+    </DataTemplate>
+   
+    <DataTemplate DataType="{x:Type vm:Tacir_InfoViewModel}">
+        <v:Tacir_Info/>
+    </DataTemplate>
+    
+
+</ResourceDictionary>
